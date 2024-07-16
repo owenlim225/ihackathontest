@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://buk5cac2em1rw"]
+[gd_scene load_steps=3 format=3 uid="uid://buk5cac2em1rw"]
 
 [ext_resource type="Script" path="res://scripts/Control.gd" id="1_4cv4c"]
+[ext_resource type="Texture2D" uid="uid://dsp16wmm3808a" path="res://dingdong.jpg" id="2_3sotb"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -12,21 +13,38 @@ grow_vertical = 2
 script = ExtResource("1_4cv4c")
 
 [node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 447.0
-offset_top = 363.0
-offset_right = 827.0
-offset_bottom = 497.0
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "click me"
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 253.0
-offset_right = 787.0
-offset_bottom = 334.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.0
+offset_top = -117.0
+offset_right = 146.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Dingdong" type="Sprite2D" parent="."]
+z_index = -99
+position = Vector2(167.801, 513.125)
+scale = Vector2(3.66046, 3.66046)
+texture = ExtResource("2_3sotb")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
