@@ -1,7 +1,46 @@
-[gd_scene load_steps=3 format=3 uid="uid://buk5cac2em1rw"]
+[gd_scene load_steps=28 format=3 uid="uid://buk5cac2em1rw"]
 
 [ext_resource type="Script" path="res://scripts/Control.gd" id="1_4cv4c"]
-[ext_resource type="Texture2D" uid="uid://dsp16wmm3808a" path="res://dingdong.jpg" id="2_3sotb"]
+[ext_resource type="Texture2D" uid="uid://1wiq47l011ip" path="res://assets/UI/background.png" id="2_g5l2k"]
+[ext_resource type="Texture2D" uid="uid://ojcqu046f0mr" path="res://assets/UI/lowerHalfBG.png" id="3_dsygc"]
+[ext_resource type="Texture2D" uid="uid://c4d2n5tel1efj" path="res://assets/UI/botBarBase.png" id="4_kpp0a"]
+[ext_resource type="Texture2D" uid="uid://bd5kphbg3u6jf" path="res://assets/UI/BtnQuestNormal.png" id="5_kcm6m"]
+[ext_resource type="Texture2D" uid="uid://tflhpifmkfvm" path="res://assets/UI/BtnQuestPressed.png" id="6_1tqgh"]
+[ext_resource type="Texture2D" uid="uid://2aeer7qgff5r" path="res://assets/UI/BtnShopNormal.png" id="7_hom0i"]
+[ext_resource type="Texture2D" uid="uid://cv3nt420f1eov" path="res://assets/UI/BtnShopPressed.png" id="8_kt2un"]
+[ext_resource type="Texture2D" uid="uid://cm72ur0dcsdsx" path="res://assets/UI/BtnFriendsNormal.png" id="9_2vyc5"]
+[ext_resource type="Texture2D" uid="uid://cj7xp6lpvbj2h" path="res://assets/UI/BtnFriendsPressed.png" id="10_4bm5c"]
+[ext_resource type="Texture2D" uid="uid://e1huy44q4j5r" path="res://assets/UI/BtnRanksNormal.png" id="11_wse23"]
+[ext_resource type="Texture2D" uid="uid://ck87mhebp7voa" path="res://assets/UI/BtnRanksPressed.png" id="12_wevie"]
+[ext_resource type="Texture2D" uid="uid://b5hvfxxbun0sy" path="res://assets/UI/BtnSettingsNormal.png" id="13_vrefn"]
+[ext_resource type="Texture2D" uid="uid://iyds76toybod" path="res://assets/UI/BtnSettingsPressed.png" id="14_g1rby"]
+[ext_resource type="Theme" uid="uid://j3wd3yjt7fne" path="res://scenes/txtTheme.tres" id="16_3vhgm"]
+[ext_resource type="FontFile" uid="uid://d4ixuxsme42gm" path="res://assets/Fonts/Anton-Regular.ttf" id="16_b6x62"]
+[ext_resource type="Texture2D" uid="uid://cu6i3cq6pxr7h" path="res://assets/UI/storeTest1.png" id="18_v400c"]
+[ext_resource type="Texture2D" uid="uid://cuh5f7g2t70mq" path="res://assets/UI/profitBar.png" id="18_yg87n"]
+[ext_resource type="Texture2D" uid="uid://bqi8u5qrwsnde" path="res://assets/UI/levelNum.png" id="19_xllry"]
+[ext_resource type="Texture2D" uid="uid://ba8jicil5gah1" path="res://assets/UI/levelBar.png" id="21_b8feb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uhmg1"]
+texture = ExtResource("4_kpp0a")
+
+[sub_resource type="Theme" id="Theme_nvv4q"]
+Panel/styles/panel = SubResource("StyleBoxTexture_uhmg1")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1spli"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_loopn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uqro4"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_525u2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ym6nf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -12,39 +51,250 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4cv4c")
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -15.0
-offset_bottom = 100.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "click me"
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -4096
+position = Vector2(360, 640)
+scale = Vector2(0.713578, 0.973384)
+texture = ExtResource("2_g5l2k")
 
-[node name="Label" type="Label" parent="."]
+[node name="LowerHalfBg" type="Sprite2D" parent="."]
+position = Vector2(360, 1000)
+scale = Vector2(1, 0.97561)
+texture = ExtResource("3_dsygc")
+
+[node name="UI" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="PopupWindows" type="Node" parent="UI"]
+
+[node name="PopupQuest" type="PopupMenu" parent="UI/PopupWindows"]
+unique_name_in_owner = true
+position = Vector2i(0, 756)
+size = Vector2i(720, 428)
+
+[node name="Background" type="Sprite2D" parent="UI/PopupWindows/PopupQuest"]
+position = Vector2(331, 229)
+texture = ExtResource("2_g5l2k")
+
+[node name="PopupShop" type="PopupMenu" parent="UI/PopupWindows"]
+unique_name_in_owner = true
+position = Vector2i(0, 756)
+size = Vector2i(720, 428)
+
+[node name="Background" type="Sprite2D" parent="UI/PopupWindows/PopupShop"]
+position = Vector2(331, 229)
+texture = ExtResource("2_g5l2k")
+
+[node name="PopupFriends" type="PopupMenu" parent="UI/PopupWindows"]
+unique_name_in_owner = true
+position = Vector2i(0, 756)
+size = Vector2i(720, 428)
+
+[node name="Background" type="Sprite2D" parent="UI/PopupWindows/PopupFriends"]
+position = Vector2(331, 229)
+texture = ExtResource("2_g5l2k")
+
+[node name="PopupRanks" type="PopupMenu" parent="UI/PopupWindows"]
+unique_name_in_owner = true
+position = Vector2i(0, 756)
+size = Vector2i(720, 428)
+
+[node name="Background" type="Sprite2D" parent="UI/PopupWindows/PopupRanks"]
+position = Vector2(331, 229)
+texture = ExtResource("2_g5l2k")
+
+[node name="PopupSettings" type="PopupMenu" parent="UI/PopupWindows"]
+unique_name_in_owner = true
+position = Vector2i(0, 756)
+size = Vector2i(720, 428)
+
+[node name="Background" type="Sprite2D" parent="UI/PopupWindows/PopupSettings"]
+position = Vector2(331, 229)
+texture = ExtResource("2_g5l2k")
+
+[node name="BotWidgets" type="Node" parent="UI"]
+
+[node name="botBarBase" type="Panel" parent="UI/BotWidgets"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = -103.0
+offset_right = 6.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_nvv4q")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/BotWidgets/botBarBase"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -129.0
-offset_top = -117.0
-offset_right = 146.0
-offset_bottom = -36.0
+offset_left = -269.5
+offset_top = -56.0
+offset_right = 270.5
+offset_bottom = 57.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="botWidgetsBtns" type="HBoxContainer" parent="UI/BotWidgets/botBarBase/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="BtnQuest" type="TextureButton" parent="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns"]
+layout_mode = 2
+size_flags_vertical = 8
+texture_normal = ExtResource("5_kcm6m")
+texture_pressed = ExtResource("6_1tqgh")
+texture_disabled = ExtResource("5_kcm6m")
+texture_focused = ExtResource("6_1tqgh")
+
+[node name="BtnShop" type="TextureButton" parent="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns"]
+layout_mode = 2
+texture_normal = ExtResource("7_hom0i")
+texture_pressed = ExtResource("8_kt2un")
+texture_disabled = ExtResource("7_hom0i")
+texture_focused = ExtResource("8_kt2un")
+
+[node name="BtnFriends" type="TextureButton" parent="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns"]
+layout_mode = 2
+texture_normal = ExtResource("9_2vyc5")
+texture_pressed = ExtResource("10_4bm5c")
+texture_disabled = ExtResource("9_2vyc5")
+texture_focused = ExtResource("10_4bm5c")
+
+[node name="BtnRanks" type="TextureButton" parent="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns"]
+layout_mode = 2
+texture_normal = ExtResource("11_wse23")
+texture_pressed = ExtResource("12_wevie")
+texture_disabled = ExtResource("11_wse23")
+texture_focused = ExtResource("12_wevie")
+
+[node name="BtnSettings" type="TextureButton" parent="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns"]
+layout_mode = 2
+texture_normal = ExtResource("13_vrefn")
+texture_pressed = ExtResource("14_g1rby")
+texture_disabled = ExtResource("13_vrefn")
+texture_focused = ExtResource("14_g1rby")
+
+[node name="CoinNum2" type="Node" parent="UI"]
+
+[node name="CoinNumLbl" type="Label" parent="UI/CoinNum2"]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -391.5
+offset_bottom = -300.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("16_3vhgm")
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Dingdong" type="Sprite2D" parent="."]
-z_index = -99
-position = Vector2(167.801, 513.125)
-scale = Vector2(3.66046, 3.66046)
-texture = ExtResource("2_3sotb")
+[node name="TopWidgets" type="Node" parent="UI"]
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="MarginContainer" type="MarginContainer" parent="UI/TopWidgets"]
+offset_right = 720.0
+offset_bottom = 128.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/TopWidgets/MarginContainer"]
+layout_mode = 2
+
+[node name="ProfitBar" type="Sprite2D" parent="UI/TopWidgets/MarginContainer/HBoxContainer"]
+position = Vector2(120, 56)
+texture = ExtResource("18_yg87n")
+
+[node name="LevelNumBG" type="Sprite2D" parent="UI/TopWidgets/MarginContainer/HBoxContainer"]
+position = Vector2(360, 50)
+texture = ExtResource("19_xllry")
+
+[node name="LevelNum" type="Label" parent="UI/TopWidgets/MarginContainer/HBoxContainer/LevelNumBG"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.5
+offset_top = -87.5
+offset_right = -24.5
+offset_bottom = -11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(9.3855e-07, 0.316078, 0.444084, 1)
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("16_b6x62")
+theme_override_font_sizes/font_size = 50
+text = "69"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelBar" type="Sprite2D" parent="UI/TopWidgets/MarginContainer/HBoxContainer"]
+position = Vector2(590, 62)
+texture = ExtResource("21_b8feb")
+
+[node name="LevelBarName" type="Label" parent="UI/TopWidgets/MarginContainer/HBoxContainer/LevelBar"]
+offset_left = -88.0
+offset_top = -32.0
+offset_right = 2.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.317647, 0.443137, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("16_b6x62")
+theme_override_font_sizes/font_size = 20
+text = "Legendary>"
+
+[node name="LevelBarNum" type="Label" parent="UI/TopWidgets/MarginContainer/HBoxContainer/LevelBar"]
+offset_left = 56.0
+offset_top = -32.0
+offset_right = 88.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.317647, 0.443137, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("16_b6x62")
+theme_override_font_sizes/font_size = 20
+text = "7/11"
+
+[node name="StoreTest1" type="Sprite2D" parent="."]
+position = Vector2(333, 576)
+texture = ExtResource("18_v400c")
+
+[node name="TapButton" type="Button" parent="."]
+layout_mode = 0
+offset_top = 128.0
+offset_right = 720.0
+offset_bottom = 720.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1spli")
+theme_override_styles/hover = SubResource("StyleBoxFlat_loopn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uqro4")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_525u2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ym6nf")
+
+[connection signal="pressed" from="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns/BtnQuest" to="." method="_on_btn_quest_pressed"]
+[connection signal="pressed" from="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns/BtnShop" to="." method="_on_btn_shop_pressed"]
+[connection signal="pressed" from="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns/BtnFriends" to="." method="_on_btn_friends_pressed"]
+[connection signal="pressed" from="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns/BtnRanks" to="." method="_on_btn_ranks_pressed"]
+[connection signal="pressed" from="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns/BtnSettings" to="." method="_on_btn_settings_pressed"]
+[connection signal="pressed" from="TapButton" to="." method="_on_tap_button_pressed"]

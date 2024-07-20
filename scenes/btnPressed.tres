@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://ddlqw23a3530x"]
+
+[ext_resource type="Texture2D" uid="uid://cyc3qtd4x4877" path="res://assets/Tiny Wonder UI Free/buttons free.png" id="1_8q4k7"]
+
+[resource]
+texture = ExtResource("1_8q4k7")
+expand_margin_left = 20.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+region_rect = Rect2(51, 4, 42, 26)
