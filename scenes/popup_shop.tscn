@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cg56rcyiti37b"]
+
+[ext_resource type="Texture2D" uid="uid://1wiq47l011ip" path="res://assets/UI/background.png" id="1_1vikm"]
+
+[node name="PopupShop" type="PopupMenu"]
+position = Vector2i(0, 756)
+size = Vector2i(720, 428)
+visible = true
+
+[node name="Background" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(331, 229)
+texture = ExtResource("1_1vikm")

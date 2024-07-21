@@ -27,9 +27,8 @@ func _on_btn_settings_pressed():
 	popup_settings.show()
 
 
-
-
-# Main tap tap function
+# Main tap tap function add coins to global variable coin
 func _on_tap_button_pressed():
-	coin += 1
-	coin_num_lbl.text = str(coin)
+	Global.coin += 1
+	coin_num_lbl.text = str(Global.coin)
+	

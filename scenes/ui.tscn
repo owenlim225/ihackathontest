@@ -1,0 +1,219 @@
+[gd_scene load_steps=18 format=3 uid="uid://ojaab4sv3hu5"]
+
+[ext_resource type="Texture2D" uid="uid://c4d2n5tel1efj" path="res://assets/UI/botBarBase.png" id="1_q2anc"]
+[ext_resource type="Texture2D" uid="uid://bd5kphbg3u6jf" path="res://assets/UI/BtnQuestNormal.png" id="2_jiunf"]
+[ext_resource type="Texture2D" uid="uid://tflhpifmkfvm" path="res://assets/UI/BtnQuestPressed.png" id="3_3lb4k"]
+[ext_resource type="Texture2D" uid="uid://2aeer7qgff5r" path="res://assets/UI/BtnShopNormal.png" id="4_c2na4"]
+[ext_resource type="Texture2D" uid="uid://cv3nt420f1eov" path="res://assets/UI/BtnShopPressed.png" id="5_t87a3"]
+[ext_resource type="Texture2D" uid="uid://cm72ur0dcsdsx" path="res://assets/UI/BtnFriendsNormal.png" id="6_32pj6"]
+[ext_resource type="Texture2D" uid="uid://cj7xp6lpvbj2h" path="res://assets/UI/BtnFriendsPressed.png" id="7_necxj"]
+[ext_resource type="Texture2D" uid="uid://e1huy44q4j5r" path="res://assets/UI/BtnRanksNormal.png" id="8_2esa4"]
+[ext_resource type="Texture2D" uid="uid://ck87mhebp7voa" path="res://assets/UI/BtnRanksPressed.png" id="9_wvrn7"]
+[ext_resource type="Texture2D" uid="uid://b5hvfxxbun0sy" path="res://assets/UI/BtnSettingsNormal.png" id="10_0sc4s"]
+[ext_resource type="Texture2D" uid="uid://iyds76toybod" path="res://assets/UI/BtnSettingsPressed.png" id="11_4iv68"]
+[ext_resource type="Texture2D" uid="uid://cuh5f7g2t70mq" path="res://assets/UI/profitBar.png" id="12_gtdlr"]
+[ext_resource type="Texture2D" uid="uid://bqi8u5qrwsnde" path="res://assets/UI/levelNum.png" id="13_l7jyy"]
+[ext_resource type="FontFile" uid="uid://d4ixuxsme42gm" path="res://assets/Fonts/Anton-Regular.ttf" id="14_vt1uv"]
+[ext_resource type="Texture2D" uid="uid://ba8jicil5gah1" path="res://assets/UI/levelBar.png" id="15_8goh4"]
+[ext_resource type="Theme" uid="uid://j3wd3yjt7fne" path="res://assets/Textures/txtTheme.tres" id="16_c82jf"]
+[ext_resource type="Texture2D" uid="uid://blb6syle7hco3" path="res://assets/UI/levelBarUnder.png" id="16_ptt6x"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="BotBarWidgets" type="Node" parent="."]
+
+[node name="Background" type="TextureRect" parent="BotBarWidgets"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -107.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_q2anc")
+
+[node name="MarginContainer" type="MarginContainer" parent="BotBarWidgets/Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="GridContainer" type="GridContainer" parent="BotBarWidgets/Background/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 5
+
+[node name="btnQuest" type="TextureButton" parent="BotBarWidgets/Background/MarginContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_jiunf")
+texture_pressed = ExtResource("3_3lb4k")
+texture_hover = ExtResource("2_jiunf")
+texture_disabled = ExtResource("2_jiunf")
+texture_focused = ExtResource("3_3lb4k")
+stretch_mode = 0
+
+[node name="btnShop" type="TextureButton" parent="BotBarWidgets/Background/MarginContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_c2na4")
+texture_pressed = ExtResource("5_t87a3")
+texture_hover = ExtResource("4_c2na4")
+texture_disabled = ExtResource("4_c2na4")
+texture_focused = ExtResource("5_t87a3")
+
+[node name="btnFriends" type="TextureButton" parent="BotBarWidgets/Background/MarginContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_32pj6")
+texture_pressed = ExtResource("7_necxj")
+texture_hover = ExtResource("6_32pj6")
+texture_disabled = ExtResource("6_32pj6")
+texture_focused = ExtResource("7_necxj")
+
+[node name="btnRank" type="TextureButton" parent="BotBarWidgets/Background/MarginContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_2esa4")
+texture_pressed = ExtResource("9_wvrn7")
+texture_hover = ExtResource("8_2esa4")
+texture_disabled = ExtResource("8_2esa4")
+texture_focused = ExtResource("9_wvrn7")
+
+[node name="btnSettings" type="TextureButton" parent="BotBarWidgets/Background/MarginContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("10_0sc4s")
+texture_pressed = ExtResource("11_4iv68")
+texture_hover = ExtResource("10_0sc4s")
+texture_disabled = ExtResource("10_0sc4s")
+texture_focused = ExtResource("11_4iv68")
+
+[node name="TopBarWidgets" type="Node" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="TopBarWidgets"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 209.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="GridContainer" type="GridContainer" parent="TopBarWidgets/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 50
+columns = 3
+
+[node name="profitBar" type="TextureRect" parent="TopBarWidgets/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+texture = ExtResource("12_gtdlr")
+stretch_mode = 2
+
+[node name="levelNum" type="TextureRect" parent="TopBarWidgets/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+texture = ExtResource("13_l7jyy")
+
+[node name="LevelNum" type="Label" parent="TopBarWidgets/MarginContainer/GridContainer/levelNum"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -42.0
+offset_right = 25.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(9.3855e-07, 0.316078, 0.444084, 1)
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("14_vt1uv")
+theme_override_font_sizes/font_size = 45
+text = "69"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="levelBar" type="TextureRect" parent="TopBarWidgets/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture = ExtResource("15_8goh4")
+stretch_mode = 2
+
+[node name="LevelBarName" type="Label" parent="TopBarWidgets/MarginContainer/GridContainer/levelBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00518135
+anchor_right = 0.00518135
+offset_left = 8.0
+offset_top = -5.0
+offset_right = 98.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.317647, 0.443137, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("14_vt1uv")
+theme_override_font_sizes/font_size = 20
+text = "Legendary>"
+metadata/_edit_use_anchors_ = true
+
+[node name="LevelBarNum" type="Label" parent="TopBarWidgets/MarginContainer/GridContainer/levelBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -28.5
+offset_right = -14.0
+offset_bottom = 2.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.317647, 0.443137, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("14_vt1uv")
+theme_override_font_sizes/font_size = 20
+text = "7/11"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="TopBarWidgets/MarginContainer/GridContainer/levelBar"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_under = ExtResource("16_ptt6x")
+texture_progress = ExtResource("15_8goh4")
+
+[node name="PanelContainer" type="PanelContainer" parent="TopBarWidgets/MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="CoinNumLbl" type="Label" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -391.5
+offset_bottom = -300.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("16_c82jf")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

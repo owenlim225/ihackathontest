@@ -1,9 +1,10 @@
-[gd_scene load_steps=28 format=3 uid="uid://buk5cac2em1rw"]
+[gd_scene load_steps=29 format=3 uid="uid://buk5cac2em1rw"]
 
 [ext_resource type="Script" path="res://scripts/Control.gd" id="1_4cv4c"]
 [ext_resource type="Texture2D" uid="uid://1wiq47l011ip" path="res://assets/UI/background.png" id="2_g5l2k"]
 [ext_resource type="Texture2D" uid="uid://ojcqu046f0mr" path="res://assets/UI/lowerHalfBG.png" id="3_dsygc"]
 [ext_resource type="Texture2D" uid="uid://c4d2n5tel1efj" path="res://assets/UI/botBarBase.png" id="4_kpp0a"]
+[ext_resource type="PackedScene" uid="uid://cg56rcyiti37b" path="res://scenes/popup_shop.tscn" id="4_ugpb0"]
 [ext_resource type="Texture2D" uid="uid://bd5kphbg3u6jf" path="res://assets/UI/BtnQuestNormal.png" id="5_kcm6m"]
 [ext_resource type="Texture2D" uid="uid://tflhpifmkfvm" path="res://assets/UI/BtnQuestPressed.png" id="6_1tqgh"]
 [ext_resource type="Texture2D" uid="uid://2aeer7qgff5r" path="res://assets/UI/BtnShopNormal.png" id="7_hom0i"]
@@ -42,7 +43,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ym6nf"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[node name="Control" type="Control"]
+[node name="Game" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -76,15 +77,10 @@ size = Vector2i(720, 428)
 position = Vector2(331, 229)
 texture = ExtResource("2_g5l2k")
 
-[node name="PopupShop" type="PopupMenu" parent="UI/PopupWindows"]
+[node name="PopupShop" parent="UI/PopupWindows" instance=ExtResource("4_ugpb0")]
 unique_name_in_owner = true
-position = Vector2i(0, 756)
-size = Vector2i(720, 428)
-
-[node name="Background" type="Sprite2D" parent="UI/PopupWindows/PopupShop"]
+position = Vector2i(0, 0)
 visible = false
-position = Vector2(331, 229)
-texture = ExtResource("2_g5l2k")
 
 [node name="PopupFriends" type="PopupMenu" parent="UI/PopupWindows"]
 unique_name_in_owner = true
@@ -108,10 +104,68 @@ texture = ExtResource("2_g5l2k")
 unique_name_in_owner = true
 position = Vector2i(0, 756)
 size = Vector2i(720, 428)
+visible = true
 
 [node name="Background" type="Sprite2D" parent="UI/PopupWindows/PopupSettings"]
 position = Vector2(331, 229)
 texture = ExtResource("2_g5l2k")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/PopupWindows/PopupSettings"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = 956.0
+offset_right = 270.0
+offset_bottom = 1069.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="botWidgetsBtns" type="HBoxContainer" parent="UI/PopupWindows/PopupSettings/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="BtnQuest" type="TextureButton" parent="UI/PopupWindows/PopupSettings/MarginContainer/botWidgetsBtns"]
+layout_mode = 2
+size_flags_vertical = 8
+texture_normal = ExtResource("5_kcm6m")
+texture_pressed = ExtResource("6_1tqgh")
+texture_disabled = ExtResource("5_kcm6m")
+texture_focused = ExtResource("6_1tqgh")
+
+[node name="BtnShop" type="TextureButton" parent="UI/PopupWindows/PopupSettings/MarginContainer/botWidgetsBtns"]
+layout_mode = 2
+texture_normal = ExtResource("7_hom0i")
+texture_pressed = ExtResource("8_kt2un")
+texture_disabled = ExtResource("7_hom0i")
+texture_focused = ExtResource("8_kt2un")
+
+[node name="BtnFriends" type="TextureButton" parent="UI/PopupWindows/PopupSettings/MarginContainer/botWidgetsBtns"]
+layout_mode = 2
+texture_normal = ExtResource("9_2vyc5")
+texture_pressed = ExtResource("10_4bm5c")
+texture_disabled = ExtResource("9_2vyc5")
+texture_focused = ExtResource("10_4bm5c")
+
+[node name="BtnRanks" type="TextureButton" parent="UI/PopupWindows/PopupSettings/MarginContainer/botWidgetsBtns"]
+layout_mode = 2
+texture_normal = ExtResource("11_wse23")
+texture_pressed = ExtResource("12_wevie")
+texture_disabled = ExtResource("11_wse23")
+texture_focused = ExtResource("12_wevie")
+
+[node name="BtnSettings" type="TextureButton" parent="UI/PopupWindows/PopupSettings/MarginContainer/botWidgetsBtns"]
+layout_mode = 2
+texture_normal = ExtResource("13_vrefn")
+texture_pressed = ExtResource("14_g1rby")
+texture_disabled = ExtResource("13_vrefn")
+texture_focused = ExtResource("14_g1rby")
 
 [node name="BotWidgets" type="Node" parent="UI"]
 
@@ -127,64 +181,6 @@ offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = SubResource("Theme_nvv4q")
-
-[node name="MarginContainer" type="MarginContainer" parent="UI/BotWidgets/botBarBase"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -269.5
-offset_top = -56.0
-offset_right = 270.5
-offset_bottom = 57.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="botWidgetsBtns" type="HBoxContainer" parent="UI/BotWidgets/botBarBase/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 20
-
-[node name="BtnQuest" type="TextureButton" parent="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns"]
-layout_mode = 2
-size_flags_vertical = 8
-texture_normal = ExtResource("5_kcm6m")
-texture_pressed = ExtResource("6_1tqgh")
-texture_disabled = ExtResource("5_kcm6m")
-texture_focused = ExtResource("6_1tqgh")
-
-[node name="BtnShop" type="TextureButton" parent="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns"]
-layout_mode = 2
-texture_normal = ExtResource("7_hom0i")
-texture_pressed = ExtResource("8_kt2un")
-texture_disabled = ExtResource("7_hom0i")
-texture_focused = ExtResource("8_kt2un")
-
-[node name="BtnFriends" type="TextureButton" parent="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns"]
-layout_mode = 2
-texture_normal = ExtResource("9_2vyc5")
-texture_pressed = ExtResource("10_4bm5c")
-texture_disabled = ExtResource("9_2vyc5")
-texture_focused = ExtResource("10_4bm5c")
-
-[node name="BtnRanks" type="TextureButton" parent="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns"]
-layout_mode = 2
-texture_normal = ExtResource("11_wse23")
-texture_pressed = ExtResource("12_wevie")
-texture_disabled = ExtResource("11_wse23")
-texture_focused = ExtResource("12_wevie")
-
-[node name="BtnSettings" type="TextureButton" parent="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns"]
-layout_mode = 2
-texture_normal = ExtResource("13_vrefn")
-texture_pressed = ExtResource("14_g1rby")
-texture_disabled = ExtResource("13_vrefn")
-texture_focused = ExtResource("14_g1rby")
 
 [node name="CoinNum2" type="Node" parent="UI"]
 
@@ -293,9 +289,9 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_uqro4")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_525u2")
 theme_override_styles/focus = SubResource("StyleBoxFlat_ym6nf")
 
-[connection signal="pressed" from="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns/BtnQuest" to="." method="_on_btn_quest_pressed"]
-[connection signal="pressed" from="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns/BtnShop" to="." method="_on_btn_shop_pressed"]
-[connection signal="pressed" from="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns/BtnFriends" to="." method="_on_btn_friends_pressed"]
-[connection signal="pressed" from="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns/BtnRanks" to="." method="_on_btn_ranks_pressed"]
-[connection signal="pressed" from="UI/BotWidgets/botBarBase/MarginContainer/botWidgetsBtns/BtnSettings" to="." method="_on_btn_settings_pressed"]
+[connection signal="pressed" from="UI/PopupWindows/PopupSettings/MarginContainer/botWidgetsBtns/BtnQuest" to="." method="_on_btn_quest_pressed"]
+[connection signal="pressed" from="UI/PopupWindows/PopupSettings/MarginContainer/botWidgetsBtns/BtnShop" to="." method="_on_btn_shop_pressed"]
+[connection signal="pressed" from="UI/PopupWindows/PopupSettings/MarginContainer/botWidgetsBtns/BtnFriends" to="." method="_on_btn_friends_pressed"]
+[connection signal="pressed" from="UI/PopupWindows/PopupSettings/MarginContainer/botWidgetsBtns/BtnRanks" to="." method="_on_btn_ranks_pressed"]
+[connection signal="pressed" from="UI/PopupWindows/PopupSettings/MarginContainer/botWidgetsBtns/BtnSettings" to="." method="_on_btn_settings_pressed"]
 [connection signal="pressed" from="TapButton" to="." method="_on_tap_button_pressed"]

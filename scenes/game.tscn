@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqtjlulnpis56"]
+
+[ext_resource type="PackedScene" uid="uid://buk5cac2em1rw" path="res://scenes/control.tscn" id="1_m37uo"]
+
+[node name="Game" instance=ExtResource("1_m37uo")]
+
+[node name="PopupSettings" parent="UI/PopupWindows" index="4"]
+visible = false
