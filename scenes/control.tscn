@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://ck87mhebp7voa" path="res://assets/UI/BtnRanksPressed.png" id="12_wevie"]
 [ext_resource type="Texture2D" uid="uid://b5hvfxxbun0sy" path="res://assets/UI/BtnSettingsNormal.png" id="13_vrefn"]
 [ext_resource type="Texture2D" uid="uid://iyds76toybod" path="res://assets/UI/BtnSettingsPressed.png" id="14_g1rby"]
-[ext_resource type="Theme" uid="uid://j3wd3yjt7fne" path="res://assets/textures/txtTheme.tres" id="16_3vhgm"]
+[ext_resource type="Theme" uid="uid://j3wd3yjt7fne" path="res://assets/Textures/txtTheme.tres" id="16_3vhgm"]
 [ext_resource type="FontFile" uid="uid://d4ixuxsme42gm" path="res://assets/Fonts/Anton-Regular.ttf" id="16_b6x62"]
 [ext_resource type="Texture2D" uid="uid://cu6i3cq6pxr7h" path="res://assets/UI/storeTest1.png" id="18_v400c"]
 [ext_resource type="Texture2D" uid="uid://cuh5f7g2t70mq" path="res://assets/UI/profitBar.png" id="18_yg87n"]
