@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsp16wmm3808a"
-path="res://.godot/imported/dingdong.jpg-6e5c3901169366d1f3a1591343fa1c8a.ctex"
+uid="uid://bah2lwlxaffd3"
+path="res://.godot/imported/OptIcon.png-ca9c2a9f3c9a1e0ea6e6858a9990e5c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dingdong.jpg"
-dest_files=["res://.godot/imported/dingdong.jpg-6e5c3901169366d1f3a1591343fa1c8a.ctex"]
+source_file="res://assets/Title Screen/PixelGUI/OptIcon.png"
+dest_files=["res://.godot/imported/OptIcon.png-ca9c2a9f3c9a1e0ea6e6858a9990e5c8.ctex"]
 
 [params]
 

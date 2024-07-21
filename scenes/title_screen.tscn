@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpuff0deqd4sc"]
+
+[ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_4r2ni"]
+[ext_resource type="PackedScene" uid="uid://lykp47flfpue" path="res://scenes/parallax_background.tscn" id="2_lpgfs"]
+[ext_resource type="Theme" uid="uid://dumay4sqx8cg2" path="res://assets/Textures/playbutton.tres" id="3_omrqy"]
+[ext_resource type="Theme" uid="uid://2dpa18jx7y0k" path="res://assets/Textures/optbutton.tres" id="4_rowlf"]
+
+[node name="title_Screen" type="Control"]
+layout_mode = 3
+anchor_right = 1.039
+anchor_bottom = 1.046
+offset_right = -42.928
+offset_bottom = -33.808
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4r2ni")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_lpgfs")]
+
+[node name="btnPlay" type="Button" parent="."]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 629.0
+offset_right = 243.0
+offset_bottom = 637.0
+scale = Vector2(28.2861, 14.8341)
+theme = ExtResource("3_omrqy")
+
+[node name="btnOption" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.53
+anchor_right = 0.5
+anchor_bottom = 0.53
+offset_left = -118.576
+offset_top = 106.312
+offset_right = -110.576
+offset_bottom = 114.312
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(28.3105, 14.8469)
+theme = ExtResource("4_rowlf")
+
+[connection signal="button_down" from="btnPlay" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="btnPlay" to="." method="_on_button_button_up"]
+[connection signal="button_down" from="btnOption" to="." method="_on_button_2_button_down"]
+[connection signal="button_up" from="btnOption" to="." method="_on_button_2_button_up"]
