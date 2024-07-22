@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://scripts/global.gd"
-Ui="*res://scenes/ui.tscn"
+Ui="*res://scenes/UI/ui.tscn"
 ShopList="*res://scripts/shop_list.gd"
 
 [display]

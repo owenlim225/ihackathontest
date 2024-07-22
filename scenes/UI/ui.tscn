@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://be6rxui2hlbk7" path="res://assets/UI/btnPanelContainer.png" id="3_5f45w"]
 [ext_resource type="Script" path="res://Shop.gd" id="4_6dbri"]
 [ext_resource type="Texture2D" uid="uid://2aeer7qgff5r" path="res://assets/UI/BtnShopNormal.png" id="4_c2na4"]
-[ext_resource type="PackedScene" uid="uid://ixynyknlcm7r" path="res://scenes/itemSlot.tscn" id="4_x7w4o"]
+[ext_resource type="PackedScene" uid="uid://bylayphh2r5eh" path="res://scenes/UI/itemSlot.tscn" id="4_x7w4o"]
 [ext_resource type="Texture2D" uid="uid://cv3nt420f1eov" path="res://assets/UI/BtnShopPressed.png" id="5_t87a3"]
 [ext_resource type="Texture2D" uid="uid://cm72ur0dcsdsx" path="res://assets/UI/BtnFriendsNormal.png" id="6_32pj6"]
 [ext_resource type="Texture2D" uid="uid://cj7xp6lpvbj2h" path="res://assets/UI/BtnFriendsPressed.png" id="7_necxj"]

@@ -17,4 +17,5 @@ func _on_btn_tap_pressed():
 
 
 
-
+func _on_btn_shop_pressed():
+	shop.show()

@@ -1,6 +1,6 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cxtop7574to8s"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cnfo6fcyj5pcq"]
 
-[ext_resource type="FontFile" uid="uid://dnjpjdgtnepol" path="res://assets/Fonts/PixelifySans-VariableFont_wght.ttf" id="1_qxp2m"]
+[ext_resource type="FontFile" path="res://assets/Fonts/PixelifySans-VariableFont_wght.ttf" id="1_qxp2m"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s3pd0"]
 
