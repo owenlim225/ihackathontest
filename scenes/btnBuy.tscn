@@ -1,25 +1,29 @@
-[gd_scene load_steps=9 format=3 uid="uid://uv3jkjise3kc"]
+[gd_scene load_steps=10 format=3 uid="uid://uv3jkjise3kc"]
 
-[ext_resource type="Texture2D" uid="uid://c4d2n5tel1efj" path="res://assets/UI/botBarBase.png" id="1_kpfco"]
+[ext_resource type="Texture2D" uid="uid://enjbqy8ok17j" path="res://assets/UI/BtnNormal.png" id="1_ing8d"]
 [ext_resource type="Texture2D" uid="uid://d341lydc1fpka" path="res://assets/UI/BtnBuy.png" id="2_6wg8x"]
-[ext_resource type="Texture2D" uid="uid://c7vvx38sftcin" path="res://assets/UI/itemPanel.png" id="3_drkcj"]
+[ext_resource type="Texture2D" uid="uid://3d7y6c0iv7ew" path="res://assets/UI/BtnDisabled.png" id="3_8vynb"]
 [ext_resource type="Texture2D" uid="uid://tbqgtm5wqn0p" path="res://assets/Items/alcohol.png" id="4_tfyfm"]
 [ext_resource type="Texture2D" uid="uid://41n26cc5ue5v" path="res://assets/UI/coinNum.png" id="5_ny2mf"]
-[ext_resource type="Theme" uid="uid://cxtop7574to8s" path="res://itemName.tres" id="6_qi8hf"]
-[ext_resource type="Theme" uid="uid://6h8smvrr5cte" path="res://itemDes.tres" id="7_a3car"]
-[ext_resource type="Theme" uid="uid://b6beyruaaqeg0" path="res://scenes/costLbl.tres" id="8_k6rq0"]
+[ext_resource type="Theme" uid="uid://cxtop7574to8s" path="res://assets/Textures/itemName.tres" id="6_qi8hf"]
+[ext_resource type="Theme" uid="uid://6h8smvrr5cte" path="res://assets/Textures/itemDes.tres" id="7_a3car"]
+[ext_resource type="Theme" uid="uid://b6beyruaaqeg0" path="res://assets/Textures/costLbl.tres" id="8_k6rq0"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yflb1"]
+load_path = "res://.godot/imported/itemPanel.png-c2643dc204ab457b8e46040dca28dbbe.ctex"
 
 [node name="btnBuy" type="TextureButton"]
 offset_right = 40.0
 offset_bottom = 40.0
-texture_normal = ExtResource("1_kpfco")
+texture_normal = ExtResource("1_ing8d")
 texture_pressed = ExtResource("2_6wg8x")
-texture_hover = ExtResource("1_kpfco")
+texture_hover = ExtResource("1_ing8d")
+texture_disabled = ExtResource("3_8vynb")
 
 [node name="ItemPanel" type="Sprite2D" parent="."]
 position = Vector2(64, 50)
 scale = Vector2(0.761905, 0.76506)
-texture = ExtResource("3_drkcj")
+texture = SubResource("CompressedTexture2D_yflb1")
 
 [node name="Icon" type="TextureRect" parent="ItemPanel"]
 offset_left = -31.0
@@ -29,7 +33,7 @@ offset_bottom = 28.0
 texture = ExtResource("4_tfyfm")
 
 [node name="CoinNum" type="Sprite2D" parent="."]
-position = Vector2(608, 56)
+position = Vector2(576, 48)
 scale = Vector2(0.0906249, 0.0906249)
 texture = ExtResource("5_ny2mf")
 
@@ -66,10 +70,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -88.0
-offset_top = -34.0
-offset_right = -30.0
-offset_bottom = 35.0
+offset_left = -84.0
+offset_top = -31.5
+offset_right = -26.0
+offset_bottom = 28.5
 grow_horizontal = 0
 grow_vertical = 2
 theme = ExtResource("8_k6rq0")

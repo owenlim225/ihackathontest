@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="ihackathontest"
-run/main_scene="res://scenes/control.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*res://scripts/global.gd"
+Ui="*res://scenes/ui.tscn"
+ShopList="*res://scripts/shop_list.gd"
 
 [display]
 

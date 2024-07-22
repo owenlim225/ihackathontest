@@ -1,9 +1,14 @@
-[gd_scene load_steps=18 format=3 uid="uid://ojaab4sv3hu5"]
+[gd_scene load_steps=23 format=3 uid="uid://ojaab4sv3hu5"]
 
+[ext_resource type="Script" path="res://scripts/ui.gd" id="1_peuct"]
 [ext_resource type="Texture2D" uid="uid://c4d2n5tel1efj" path="res://assets/UI/botBarBase.png" id="1_q2anc"]
+[ext_resource type="Texture2D" uid="uid://ojcqu046f0mr" path="res://assets/UI/lowerHalfBG.png" id="2_3548m"]
 [ext_resource type="Texture2D" uid="uid://bd5kphbg3u6jf" path="res://assets/UI/BtnQuestNormal.png" id="2_jiunf"]
 [ext_resource type="Texture2D" uid="uid://tflhpifmkfvm" path="res://assets/UI/BtnQuestPressed.png" id="3_3lb4k"]
+[ext_resource type="Texture2D" uid="uid://be6rxui2hlbk7" path="res://assets/UI/btnPanelContainer.png" id="3_5f45w"]
+[ext_resource type="Script" path="res://Shop.gd" id="4_6dbri"]
 [ext_resource type="Texture2D" uid="uid://2aeer7qgff5r" path="res://assets/UI/BtnShopNormal.png" id="4_c2na4"]
+[ext_resource type="PackedScene" uid="uid://ixynyknlcm7r" path="res://scenes/itemSlot.tscn" id="4_x7w4o"]
 [ext_resource type="Texture2D" uid="uid://cv3nt420f1eov" path="res://assets/UI/BtnShopPressed.png" id="5_t87a3"]
 [ext_resource type="Texture2D" uid="uid://cm72ur0dcsdsx" path="res://assets/UI/BtnFriendsNormal.png" id="6_32pj6"]
 [ext_resource type="Texture2D" uid="uid://cj7xp6lpvbj2h" path="res://assets/UI/BtnFriendsPressed.png" id="7_necxj"]
@@ -19,6 +24,78 @@
 [ext_resource type="Texture2D" uid="uid://blb6syle7hco3" path="res://assets/UI/levelBarUnder.png" id="16_ptt6x"]
 
 [node name="UI" type="CanvasLayer"]
+script = ExtResource("1_peuct")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -574.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_3548m")
+
+[node name="Shop" type="TextureRect" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -537.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_5f45w")
+script = ExtResource("4_6dbri")
+
+[node name="MarginContainer" type="MarginContainer" parent="Shop"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -520.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Shop/MarginContainer"]
+layout_mode = 2
+
+[node name="items" type="VBoxContainer" parent="Shop/MarginContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="itemSlot" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
+layout_mode = 2
+
+[node name="itemSlot2" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
+layout_mode = 2
+
+[node name="itemSlot3" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
+layout_mode = 2
+
+[node name="itemSlot4" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
+layout_mode = 2
+
+[node name="itemSlot5" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
+layout_mode = 2
+
+[node name="itemSlot6" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
+layout_mode = 2
+
+[node name="itemSlot7" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
+layout_mode = 2
+
+[node name="itemSlot8" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
+layout_mode = 2
+
+[node name="itemSlot9" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
+layout_mode = 2
+
+[node name="itemSlot10" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
+layout_mode = 2
 
 [node name="BotBarWidgets" type="Node" parent="."]
 
@@ -214,6 +291,17 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 theme = ExtResource("16_c82jf")
-text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BtnTap" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -574.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[connection signal="pressed" from="BotBarWidgets/Background/MarginContainer/GridContainer/btnShop" to="Shop" method="_on_btn_shop_pressed"]
+[connection signal="pressed" from="BtnTap" to="." method="_on_btn_tap_pressed"]

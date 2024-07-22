@@ -1,5 +1,3 @@
-extends Node
-
 class_name ItemData
 
 static var food_and_drink = {

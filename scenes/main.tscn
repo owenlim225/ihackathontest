@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://car7knffacwot"]
+
+[ext_resource type="PackedScene" uid="uid://diomrbar7bkud" path="res://scenes/background/ingameParallax.tscn" id="1_hchte"]
+[ext_resource type="Texture2D" uid="uid://ojcqu046f0mr" path="res://assets/UI/lowerHalfBG.png" id="2_a34fv"]
+[ext_resource type="Texture2D" uid="uid://cu6i3cq6pxr7h" path="res://assets/UI/storeTest1.png" id="3_tydfk"]
+[ext_resource type="PackedScene" uid="uid://ojaab4sv3hu5" path="res://scenes/ui.tscn" id="4_fmyc7"]
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ingameParallax" parent="." instance=ExtResource("1_hchte")]
+
+[node name="LowerBG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -574.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_a34fv")
+metadata/_edit_lock_ = true
+
+[node name="testStore" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -242.0
+offset_top = -224.0
+offset_right = 242.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_tydfk")
+
+[node name="UI" parent="." instance=ExtResource("4_fmyc7")]
