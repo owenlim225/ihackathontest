@@ -11,20 +11,21 @@ config_version=5
 [application]
 
 config/name="ihackathontest"
+run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
+config/stretch/mode="canvas_items"
 
 [autoload]
 
 Global="*res://scripts/global.gd"
-Ui="*res://scenes/UI/ui.tscn"
 ShopList="*res://scripts/shop_list.gd"
 
 [display]
 
 window/size/viewport_width=720
 window/size/viewport_height=1280
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 
 [rendering]
 

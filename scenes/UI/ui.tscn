@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://ojaab4sv3hu5"]
+[gd_scene load_steps=22 format=3 uid="uid://ojaab4sv3hu5"]
 
 [ext_resource type="Script" path="res://scripts/ui.gd" id="1_peuct"]
 [ext_resource type="Texture2D" uid="uid://c4d2n5tel1efj" path="res://assets/UI/botBarBase.png" id="1_q2anc"]
@@ -19,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://cuh5f7g2t70mq" path="res://assets/UI/profitBar.png" id="12_gtdlr"]
 [ext_resource type="Texture2D" uid="uid://bqi8u5qrwsnde" path="res://assets/UI/levelNum.png" id="13_l7jyy"]
 [ext_resource type="FontFile" uid="uid://d4ixuxsme42gm" path="res://assets/Fonts/Anton-Regular.ttf" id="14_vt1uv"]
-[ext_resource type="Texture2D" uid="uid://ba8jicil5gah1" path="res://assets/UI/levelBar.png" id="15_8goh4"]
 [ext_resource type="Theme" uid="uid://j3wd3yjt7fne" path="res://assets/Textures/txtTheme.tres" id="16_c82jf"]
 [ext_resource type="Texture2D" uid="uid://blb6syle7hco3" path="res://assets/UI/levelBarUnder.png" id="16_ptt6x"]
 
@@ -114,6 +113,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -13.0
+offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 20
@@ -225,7 +226,6 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-texture = ExtResource("15_8goh4")
 stretch_mode = 2
 
 [node name="LevelBarName" type="Label" parent="TopBarWidgets/MarginContainer/GridContainer/levelBar"]
@@ -275,7 +275,6 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture_under = ExtResource("16_ptt6x")
-texture_progress = ExtResource("15_8goh4")
 
 [node name="PanelContainer" type="PanelContainer" parent="TopBarWidgets/MarginContainer/GridContainer"]
 layout_mode = 2

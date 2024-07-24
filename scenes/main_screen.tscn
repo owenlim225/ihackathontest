@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctknbpm0be3h0"]
+
+[ext_resource type="Script" path="res://scenes/main_screen.gd" id="1_3rpsh"]
+[ext_resource type="PackedScene" uid="uid://dqayucsojwqf3" path="res://scenes/main.tscn" id="1_vr67q"]
+[ext_resource type="PackedScene" uid="uid://bpuff0deqd4sc" path="res://scenes/UI/title_screen.tscn" id="2_vn7vv"]
+
+[node name="main_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3rpsh")
+
+[node name="main" parent="." instance=ExtResource("1_vr67q")]
+layout_mode = 1
+
+[node name="title_Screen" parent="." instance=ExtResource("2_vn7vv")]
+layout_mode = 1

@@ -91,3 +91,63 @@ motion_mirroring = Vector2(1152, 0)
 position = Vector2(593, 646)
 scale = Vector2(3.04043, 3.05148)
 texture = ExtResource("6_ro6e3")
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="."]
+position = Vector2(0, 317)
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="CloudsMg3" type="Sprite2D" parent="ParallaxLayer7"]
+position = Vector2(584, 400)
+scale = Vector2(3.04043, 3.05148)
+texture = ExtResource("3_bpa1u")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+position = Vector2(0, -246)
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="CloudsMg3" type="Sprite2D" parent="ParallaxLayer5"]
+position = Vector2(586, 927)
+scale = Vector2(3.04043, 3.05148)
+texture = ExtResource("5_40v5m")
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="."]
+position = Vector2(0, 56)
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="CloudsMg3" type="Sprite2D" parent="ParallaxLayer8"]
+position = Vector2(593, 646)
+scale = Vector2(3.04043, 3.05148)
+texture = ExtResource("6_ro6e3")
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="."]
+position = Vector2(0, 544)
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="CloudsMg3" type="Sprite2D" parent="ParallaxLayer9"]
+position = Vector2(584, 400)
+scale = Vector2(3.04043, 3.05148)
+texture = ExtResource("3_bpa1u")
+
+[node name="ParallaxLayer10" type="ParallaxLayer" parent="."]
+position = Vector2(0, -19)
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="CloudsMg3" type="Sprite2D" parent="ParallaxLayer10"]
+position = Vector2(586, 927)
+scale = Vector2(3.04043, 3.05148)
+texture = ExtResource("5_40v5m")
+
+[node name="ParallaxLayer11" type="ParallaxLayer" parent="."]
+position = Vector2(0, 283)
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="CloudsMg3" type="Sprite2D" parent="ParallaxLayer11"]
+position = Vector2(593, 646)
+scale = Vector2(3.04043, 3.05148)
+texture = ExtResource("6_ro6e3")

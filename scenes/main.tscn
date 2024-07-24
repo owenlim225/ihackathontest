@@ -1,17 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqayucsojwqf3"]
+[gd_scene load_steps=6 format=3 uid="uid://dqayucsojwqf3"]
 
 [ext_resource type="PackedScene" uid="uid://diomrbar7bkud" path="res://scenes/background/ingameParallax.tscn" id="1_hchte"]
+[ext_resource type="Script" path="res://scripts/CanvasLayer.gd" id="1_j8ev4"]
 [ext_resource type="Texture2D" uid="uid://ojcqu046f0mr" path="res://assets/UI/lowerHalfBG.png" id="2_a34fv"]
 [ext_resource type="Texture2D" uid="uid://cu6i3cq6pxr7h" path="res://assets/UI/storeTest1.png" id="3_tydfk"]
-[ext_resource type="PackedScene" uid="uid://ojaab4sv3hu5" path="res://scenes/UI/ui.tscn" id="4_fmyc7"]
+[ext_resource type="PackedScene" uid="uid://ojaab4sv3hu5" path="res://scenes/UI/ui.tscn" id="5_nk0dw"]
 
 [node name="main" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 1280.0
+offset_bottom = 1280.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_j8ev4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = -1280.0
+offset_right = 720.0
 
 [node name="ingameParallax" parent="." instance=ExtResource("1_hchte")]
 
@@ -25,7 +34,6 @@ offset_top = -574.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("2_a34fv")
-metadata/_edit_lock_ = true
 
 [node name="testStore" type="TextureRect" parent="."]
 layout_mode = 1
@@ -35,11 +43,11 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -242.0
-offset_top = -224.0
+offset_top = -223.0
 offset_right = 242.0
-offset_bottom = 66.0
+offset_bottom = 67.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_tydfk")
 
-[node name="UI" parent="." instance=ExtResource("4_fmyc7")]
+[node name="UI" parent="." instance=ExtResource("5_nk0dw")]
