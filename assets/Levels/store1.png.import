@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w4erdcsgptjt"
-path="res://.godot/imported/bars free.png-1b1dfc076c7abf6a765e13dec4882f04.ctex"
+uid="uid://c7s6fp03vnrmj"
+path="res://.godot/imported/store1.png-b565b95b8f815557bd030a4f0002f891.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny Wonder UI Free/bars free.png"
-dest_files=["res://.godot/imported/bars free.png-1b1dfc076c7abf6a765e13dec4882f04.ctex"]
+source_file="res://assets/Levels/store1.png"
+dest_files=["res://.godot/imported/store1.png-b565b95b8f815557bd030a4f0002f891.ctex"]
 
 [params]
 

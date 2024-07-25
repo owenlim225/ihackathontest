@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gli6xo5rig55"
-path="res://.godot/imported/scrollbars free.png-083c9954ad6a0ceb8a24f9826ef87e64.ctex"
+uid="uid://ydf5jkdky3lf"
+path="res://.godot/imported/store4.png-de1c41d0a45b058c60bd097b427e4b47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny Wonder UI Free/scrollbars free.png"
-dest_files=["res://.godot/imported/scrollbars free.png-083c9954ad6a0ceb8a24f9826ef87e64.ctex"]
+source_file="res://assets/UI/store4.png"
+dest_files=["res://.godot/imported/store4.png-de1c41d0a45b058c60bd097b427e4b47.ctex"]
 
 [params]
 

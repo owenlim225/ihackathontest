@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqayucsojwqf3"]
+[gd_scene load_steps=6 format=3 uid="uid://dqayucsojwqf3"]
 
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_g7hkn"]
 [ext_resource type="PackedScene" uid="uid://diomrbar7bkud" path="res://scenes/background/ingameParallax.tscn" id="1_hchte"]
 [ext_resource type="Texture2D" uid="uid://ojcqu046f0mr" path="res://assets/UI/lowerHalfBG.png" id="2_a34fv"]
 [ext_resource type="Texture2D" uid="uid://cu6i3cq6pxr7h" path="res://assets/UI/storeTest1.png" id="3_tydfk"]
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_g7hkn")
 
 [node name="ingameParallax" parent="." instance=ExtResource("1_hchte")]
 
@@ -43,3 +45,8 @@ grow_vertical = 2
 texture = ExtResource("3_tydfk")
 
 [node name="UI" parent="." instance=ExtResource("4_fmyc7")]
+
+[node name="auto_save_timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="timeout" from="auto_save_timer" to="." method="_on_auto_save_timer_timeout"]

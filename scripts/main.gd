@@ -1,0 +1,14 @@
+extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	var save_data = SaveManager.read_save()
+	print(save_data)
+	
+
+
+
+
+
+

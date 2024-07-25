@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nah4yh6jjx0j"
-path="res://.godot/imported/gui_free.png-4db5fbe45c8be2d708501df75b5e10f4.ctex"
+uid="uid://davmgailguips"
+path="res://.godot/imported/userSpriteHappy.png-8c7dfb4115f9d8b1a68d78cffdf5c888.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny Wonder UI Free/gui_free.png"
-dest_files=["res://.godot/imported/gui_free.png-4db5fbe45c8be2d708501df75b5e10f4.ctex"]
+source_file="res://assets/UI/userSpriteHappy.png"
+dest_files=["res://.godot/imported/userSpriteHappy.png-8c7dfb4115f9d8b1a68d78cffdf5c888.ctex"]
 
 [params]
 

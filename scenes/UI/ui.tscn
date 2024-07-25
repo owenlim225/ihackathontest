@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://bd5kphbg3u6jf" path="res://assets/UI/BtnQuestNormal.png" id="2_jiunf"]
 [ext_resource type="Texture2D" uid="uid://tflhpifmkfvm" path="res://assets/UI/BtnQuestPressed.png" id="3_3lb4k"]
 [ext_resource type="Texture2D" uid="uid://be6rxui2hlbk7" path="res://assets/UI/btnPanelContainer.png" id="3_5f45w"]
-[ext_resource type="Script" path="res://Shop.gd" id="4_6dbri"]
+[ext_resource type="Script" path="res://scripts/Shop.gd" id="4_6dbri"]
 [ext_resource type="Texture2D" uid="uid://2aeer7qgff5r" path="res://assets/UI/BtnShopNormal.png" id="4_c2na4"]
-[ext_resource type="PackedScene" uid="uid://bylayphh2r5eh" path="res://scenes/UI/itemSlot.tscn" id="4_x7w4o"]
+[ext_resource type="PackedScene" uid="uid://bg1hhtbld51uo" path="res://scenes/UI/itemShop.tscn" id="5_2mbg3"]
 [ext_resource type="Texture2D" uid="uid://cv3nt420f1eov" path="res://assets/UI/BtnShopPressed.png" id="5_t87a3"]
 [ext_resource type="Texture2D" uid="uid://cm72ur0dcsdsx" path="res://assets/UI/BtnFriendsNormal.png" id="6_32pj6"]
 [ext_resource type="Texture2D" uid="uid://cj7xp6lpvbj2h" path="res://assets/UI/BtnFriendsPressed.png" id="7_necxj"]
@@ -54,6 +54,7 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -520.0
+offset_bottom = 110.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/margin_left = 20
@@ -64,37 +65,15 @@ theme_override_constants/margin_bottom = 20
 [node name="ScrollContainer" type="ScrollContainer" parent="Shop/MarginContainer"]
 layout_mode = 2
 
-[node name="items" type="VBoxContainer" parent="Shop/MarginContainer/ScrollContainer"]
+[node name="vboxcontainer" type="VBoxContainer" parent="Shop/MarginContainer/ScrollContainer"]
 layout_mode = 2
+size_flags_horizontal = 8
 
-[node name="itemSlot" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
+[node name="items" type="GridContainer" parent="Shop/MarginContainer/ScrollContainer/vboxcontainer"]
 layout_mode = 2
+columns = 2
 
-[node name="itemSlot2" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
-layout_mode = 2
-
-[node name="itemSlot3" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
-layout_mode = 2
-
-[node name="itemSlot4" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
-layout_mode = 2
-
-[node name="itemSlot5" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
-layout_mode = 2
-
-[node name="itemSlot6" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
-layout_mode = 2
-
-[node name="itemSlot7" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
-layout_mode = 2
-
-[node name="itemSlot8" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
-layout_mode = 2
-
-[node name="itemSlot9" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
-layout_mode = 2
-
-[node name="itemSlot10" parent="Shop/MarginContainer/ScrollContainer/items" instance=ExtResource("4_x7w4o")]
+[node name="itemShop" parent="Shop/MarginContainer/ScrollContainer/vboxcontainer/items" instance=ExtResource("5_2mbg3")]
 layout_mode = 2
 
 [node name="BotBarWidgets" type="Node" parent="."]
@@ -197,7 +176,7 @@ layout_mode = 2
 size_flags_vertical = 6
 texture = ExtResource("13_l7jyy")
 
-[node name="LevelNum" type="Label" parent="TopBarWidgets/MarginContainer/GridContainer/levelNum"]
+[node name="LevelNumLbl" type="Label" parent="TopBarWidgets/MarginContainer/GridContainer/levelNum"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyc3qtd4x4877"
-path="res://.godot/imported/buttons free.png-86f1ac2a037ab829d74e04caf4b32b61.ctex"
+uid="uid://deob0fy2pod4m"
+path="res://.godot/imported/itemShopClicked.png-f74ef1ed85fc07938aefe73fc50fdb8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny Wonder UI Free/buttons free.png"
-dest_files=["res://.godot/imported/buttons free.png-86f1ac2a037ab829d74e04caf4b32b61.ctex"]
+source_file="res://assets/UI/itemShopClicked.png"
+dest_files=["res://.godot/imported/itemShopClicked.png-f74ef1ed85fc07938aefe73fc50fdb8f.ctex"]
 
 [params]
 
